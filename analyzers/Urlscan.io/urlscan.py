@@ -25,7 +25,7 @@ class Urlscan:
             "Content-Type": "application/json",
             "API-Key": api_key,
         }
-        data = '{"url": %s, "public": "on"}' % self.query
+        data = '{"url": %s, "private": "on"}' % self.query
         r = requests.post(
             "https://urlscan.io/api/v1/scan/", headers=headers, data=data, verify=False
         )
